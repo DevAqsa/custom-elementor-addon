@@ -33,6 +33,9 @@ function register_custom_widgets($widgets_manager) {
     require_once(__DIR__ . '/widgets/testimonial-carousel-widget.php');
     require_once(__DIR__ . '/widgets/blog-posts-grid-widget.php');
     require_once(__DIR__ . '/widgets/portfolio-gallery-widget.php');
+    require_once(__DIR__ . '/widgets/accordion-widget.php');
+    require_once(__DIR__ . '/widgets/flip-box-widget.php');
+    require_once(__DIR__ . '/widgets/video-testimonial-widget.php');
     $widgets_manager->register(new \Custom_Team_Member_Widget());
     $widgets_manager->register(new \Custom_CTA_Widget());
     $widgets_manager->register(new \Custom_Feature_Box_Widget());
@@ -40,6 +43,10 @@ function register_custom_widgets($widgets_manager) {
     $widgets_manager->register(new \Custom_Testimonial_Carousel_Widget());
     $widgets_manager->register(new \Custom_Blog_Posts_Grid_Widget());
     $widgets_manager->register(new \Custom_Portfolio_Gallery_Widget());
+    $widgets_manager->register(new \Custom_Accordion_Widget());
+    $widgets_manager->register(new \Custom_Flip_Box_Widget());
+    $widgets_manager->register(new \Custom_Video_Testimonial_Widget());
+
 }
 
 add_action('elementor/widgets/register', 'register_custom_widgets');
